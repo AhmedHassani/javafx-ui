@@ -1,0 +1,41 @@
+
+.root{
+    -fx-background-color: #222222;
+}
+
+
+.secondary_color{
+   -fx-background-color: #2D2D2D;
+}
+.border_radius{
+     -fx-border-radius: 1px;
+      -fx-border-width: 2px;
+      -fx-border-color: #fff;
+}
+.r5{
+    -fx-background-radius: 10 10 10 10;
+}
+.r10{
+    -fx-background-radius: 20 20 20 20;
+}
+.filed{
+    -fx-background-radius: 10 0 0 10;
+}
+.panefiled{
+    -fx-background-radius: 0 10 10 0;
+}
+
+.button_view{
+  -fx-background-color: #4971FF;
+  -fx-color:#FFF;
+  -fx-background-radius: 3 3 3 3;
+}
+
+.item{
+
+}
+.item:hover{
+   -fx-border-color: #4971ff;
+   -fx-border-width:  0 0 0 4;
+}
+

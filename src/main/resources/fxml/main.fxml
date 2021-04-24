@@ -1,14 +1,1160 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.ahd.Controller"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="660.0" prefWidth="1440.0" styleClass="primary_color" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ahd.main.Controller">
+   <children>
+      <VBox prefHeight="660.0" prefWidth="51.0" styleClass="secondary_color" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="51.0" styleClass="item">
+               <children>
+                  <FontAwesomeIconView fill="#e8e8e8" fontSmoothingType="LCD" glyphName="BARS" size="30" stroke="#070202" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="381.0" prefWidth="51.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="51.0" styleClass="item">
+                     <children>
+                        <FontAwesomeIconView fill="#e1dfdf" fontSmoothingType="LCD" glyphName="STICKY_NOTE_ALT" size="20" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="51.0" styleClass="item">
+                     <children>
+                        <FontAwesomeIconView fill="#e1dfdf" fontSmoothingType="LCD" glyphName="DOLLAR" size="25" stroke="BLACK" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="51.0" styleClass="item">
+                     <children>
+                        <FontAwesomeIconView fill="#e1dfdf" fontSmoothingType="LCD" glyphName="USER" size="25" stroke="#221111" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="51.0" styleClass="item">
+                     <children>
+                        <FontAwesomeIconView fill="#e1dfdf" fontSmoothingType="LCD" glyphName="CALENDAR" size="20" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="51.0" styleClass="item">
+                     <children>
+                        <FontAwesomeIconView fill="#e1dfdf" fontSmoothingType="LCD" glyphName="COG" size="25" stroke="BLACK" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="51.0" styleClass="item">
+                     <children>
+                        <FontAwesomeIconView fill="#e1dfdf" fontSmoothingType="LCD" glyphName="CHEVRON_DOWN" size="25" stroke="#0d0000" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="51.0" styleClass="item">
+                     <children>
+                        <FontAwesomeIconView fill="#e1dfdf" fontSmoothingType="LCD" glyphName="WINDOW_MAXIMIZE" size="20" stroke="BLACK" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" onMouseClicked="#close" prefHeight="43.0" prefWidth="51.0" styleClass="item">
+                     <children>
+                        <FontAwesomeIconView fill="#e1dfdf" fontSmoothingType="LCD" glyphName="WINDOW_CLOSE_ALT" size="20" smooth="false" stroke="BLACK">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="189.0" prefWidth="51.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="41.0" prefWidth="51.0">
+                     <children>
+                        <FontAwesomeIconView fill="#e1dfdf" glyphName="INFO_CIRCLE" size="25" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="51.0" layoutY="-0.5" minHeight="-Infinity" prefHeight="50.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="text" text="CRM SYSTEM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin></Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="195.0" promptText="Search" HBox.hgrow="ALWAYS">
+                           <styleClass>
+                              <String fx:value="secondary_color" />
+                              <String fx:value="filed" />
+                           </styleClass>
+                        </TextField>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="48.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <FontAwesomeIconView fill="#ddd9d9" glyphName="SEARCH" selectionFill="#aeaaaa" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="secondary_color" />
+                              <String fx:value="panefiled" />
+                           </styleClass>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="140.0" styleClass="button_view">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="102.0" text="Administrator" textFill="WHITE" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="75.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="14" stroke="#5270f6">
+                                 <VBox.margin>
+                                    <Insets right="3.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </FontAwesomeIconView>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="261.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="86.0">
+                     <children>
+                        <Label text="DEV AHMED" textFill="WHITE" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="38.0" prefWidth="38.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BELL_ALT" size="20" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="38.0" styleClass="border_radius">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/person.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox layoutX="51.0" layoutY="50.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox prefHeight="610.0" prefWidth="571.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <children>
+                  <HBox prefHeight="121.0" prefWidth="614.0">
+                     <children>
+                        <HBox prefHeight="121.0" prefWidth="246.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox prefHeight="121.0" prefWidth="171.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="96.0">
+                                       <children>
+                                          <Label text="View item one " textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIconView fill="#cccccc" glyphName="INFO_CIRCLE" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="93.0" prefWidth="131.0">
+                                       <children>
+                                          <Label alignment="BOTTOM_CENTER" prefHeight="93.0" prefWidth="101.0" text="17" textFill="#9dc869">
+                                             <font>
+                                                <Font name="System Bold" size="75.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="121.0" prefWidth="101.0">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefHeight="47.0" prefWidth="76.0" VBox.vgrow="ALWAYS">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label text="+ 15%" textFill="#9dc869">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="76.0">
+                                       <children>
+                                          <Label text="Item one" textFill="#cccccc">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <FontAwesomeIconView fill="#cccccc" glyphName="INFO_CIRCLE" size="10" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <styleClass>
+                              <String fx:value="r5" />
+                              <String fx:value="secondary_color" />
+                           </styleClass>
+                        </HBox>
+                        <HBox prefHeight="121.0" prefWidth="246.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox prefHeight="121.0" prefWidth="171.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="96.0">
+                                       <children>
+                                          <Label text="View item one " textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIconView fill="#cccccc" glyphName="INFO_CIRCLE" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="93.0" prefWidth="131.0">
+                                       <children>
+                                          <Label alignment="BOTTOM_CENTER" prefHeight="93.0" prefWidth="101.0" text="34" textFill="#4971ff">
+                                             <font>
+                                                <Font name="System Bold" size="75.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="121.0" prefWidth="101.0">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefHeight="47.0" prefWidth="76.0" VBox.vgrow="ALWAYS">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label text="+ 30%" textFill="#9dc869">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="76.0">
+                                       <children>
+                                          <Label text="Item one" textFill="#cccccc">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <FontAwesomeIconView fill="#cccccc" glyphName="INFO_CIRCLE" size="10" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <styleClass>
+                              <String fx:value="r5" />
+                              <String fx:value="secondary_color" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox prefHeight="121.0" prefWidth="246.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox prefHeight="121.0" prefWidth="171.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="96.0">
+                                       <children>
+                                          <Label text="View item one " textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="5.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIconView fill="#cccccc" glyphName="INFO_CIRCLE" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="93.0" prefWidth="131.0">
+                                       <children>
+                                          <Label alignment="BOTTOM_CENTER" prefHeight="93.0" prefWidth="101.0" text="6" textFill="#edb042">
+                                             <font>
+                                                <Font name="System Bold" size="75.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="121.0" prefWidth="101.0">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefHeight="47.0" prefWidth="76.0" VBox.vgrow="ALWAYS">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label text="+ 3%" textFill="#9dc869">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="76.0">
+                                       <children>
+                                          <Label text="Item one" textFill="#cccccc">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <FontAwesomeIconView fill="#cccccc" glyphName="INFO_CIRCLE" size="10" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <styleClass>
+                              <String fx:value="r5" />
+                              <String fx:value="secondary_color" />
+                           </styleClass>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="secondary_color" />
+                        <String fx:value="r5" />
+                     </styleClass>
+                     <children>
+                        <HBox prefHeight="48.0" prefWidth="581.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="134.0">
+                                 <children>
+                                    <Label text="Statistics" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="5.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIconView fill="#cccccc" glyphName="INFO_CIRCLE" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #222222;" styleClass="r5">
+                                       <HBox.margin>
+                                          <Insets left="2.0" right="2.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label text="This year" textFill="#fffefe" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #4971ff#4971ff;" styleClass="r5">
+                                       <HBox.margin>
+                                          <Insets left="2.0" right="2.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label text="This month" textFill="#fffefe" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #222222;" styleClass="r5">
+                                       <HBox.margin>
+                                          <Insets left="2.0" right="2.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label text="This week" textFill="#fffefe" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="2.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <LineChart fx:id="lineChart" legendVisible="false" prefHeight="167.0" prefWidth="581.0" stylesheets="@../css/line_chart.css" VBox.vgrow="ALWAYS">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="231.0" prefWidth="581.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <styleClass>
+                              <String fx:value="r5" />
+                              <String fx:value="secondary_color" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <VBox prefHeight="54.0" prefWidth="286.0">
+                                 <children>
+                                    <Label text="Show data week 1" textFill="WHITE">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="15.0" text="in the pane show data in week" textFill="#aeaeae">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="309.0" prefWidth="286.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER">
+                                       <children>
+                                          <Label alignment="BOTTOM_CENTER" prefHeight="119.0" prefWidth="129.0" text="181" textFill="#4971ff">
+                                             <font>
+                                                <Font name="System Bold" size="75.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label contentDisplay="CENTER" text="Total Price Prodcut" textFill="#aeaeae">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <HBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER" prefHeight="91.0" prefWidth="53.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: #87C7D4#87C7D4;" text="45" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="25.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="iphone" textFill="#aeaeae">
+                                                         <VBox.margin>
+                                                            <Insets top="3.0" />
+                                                         </VBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="91.0" prefWidth="53.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="23" textFill="#9dc869">
+                                                         <font>
+                                                            <Font size="25.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="sumsug" textFill="#aeaeae">
+                                                         <VBox.margin>
+                                                            <Insets top="3.0" />
+                                                         </VBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" layoutX="63.0" layoutY="10.0" prefHeight="91.0" prefWidth="53.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: #edb042#edb042;" text="15" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="25.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="xiaomi" textFill="#aeaeae">
+                                                         <VBox.margin>
+                                                            <Insets top="3.0" />
+                                                         </VBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <HBox HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label style="-fx-text-fill: #8D62DD#8D62DD;" text="45" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="25.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="macbook" textFill="#aeaeae">
+                                                               <VBox.margin>
+                                                                  <Insets top="3.0" />
+                                                               </VBox.margin>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets top="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label style="-fx-text-fill: #E36C68#E36C68;" text="23" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="25.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="HP" textFill="#aeaeae">
+                                                               <VBox.margin>
+                                                                  <Insets top="3.0" />
+                                                               </VBox.margin>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets top="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox alignment="TOP_CENTER" layoutX="63.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label text="4" textFill="#aeaeae">
+                                                               <font>
+                                                                  <Font size="25.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="LG" textFill="#aeaeae">
+                                                               <VBox.margin>
+                                                                  <Insets top="3.0" />
+                                                               </VBox.margin>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets top="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <styleClass>
+                              <String fx:value="r5" />
+                              <String fx:value="secondary_color" />
+                           </styleClass>
+                           <children>
+                              <VBox prefHeight="54.0" prefWidth="286.0">
+                                 <children>
+                                    <Label text="Best Prodcut " textFill="WHITE">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="15.0" text="show best 4 prodcut in this week" textFill="#aeaeae">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="412.0" style="-fx-background-color: #222222;" styleClass="r10">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="#123" textFill="#4971ff" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="Apple" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="iphone 12 pro" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="mobile" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="15.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="412.0" style="-fx-background-color: #222222;" styleClass="r10">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="#124" textFill="#4971ff" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="Xiaomi" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="mi 10 ultra" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="mobile" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="7.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="55.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="412.0" style="-fx-background-color: #222222;" styleClass="r10">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="#125" textFill="#4971ff" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="Apple" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="macbook pro" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="labtob" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="95.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="412.0" style="-fx-background-color: #222222;" styleClass="r10">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="#126" textFill="#4971ff" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="samsung" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="note 20 ultra" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="mobile" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="570.0" prefWidth="408.0">
+               <HBox.margin>
+                  <Insets bottom="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <children>
+                  <HBox prefHeight="77.0" prefWidth="408.0">
+                     <styleClass>
+                        <String fx:value="r5" />
+                        <String fx:value="secondary_color" />
+                     </styleClass>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="77.0" prefWidth="40.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="ANGLE_LEFT" size="40" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="52.0">
+                                 <children>
+                                    <Label text="Mo" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="27.0" layoutY="18.0" text="8" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="8.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="52.0">
+                                 <children>
+                                    <Label text="Tu" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="27.0" layoutY="18.0" text="9" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="8.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="62.0" layoutY="19.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="52.0">
+                                 <children>
+                                    <Label text="We" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="27.0" layoutY="18.0" text="10" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="8.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="114.0" layoutY="19.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="52.0" style="-fx-background-color: #4971ff#4971ff #4971ff#4971ff;" styleClass="r5">
+                                 <children>
+                                    <Label text="Fr" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="27.0" layoutY="18.0" text="11" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="8.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="166.0" layoutY="19.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="52.0">
+                                 <children>
+                                    <Label text="Mu" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="27.0" layoutY="18.0" text="12" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="8.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="218.0" layoutY="19.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="52.0">
+                                 <children>
+                                    <Label text="Sa" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="27.0" layoutY="18.0" text="13" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="8.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="270.0" layoutY="19.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="52.0">
+                                 <children>
+                                    <Label text="Su" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="27.0" layoutY="18.0" text="14" textFill="#cccccc">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="8.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="63.0" layoutY="10.0" prefHeight="77.0" prefWidth="40.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="ANGLE_RIGHT" size="40" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="r5" />
+                        <String fx:value="secondary_color" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="408.0">
+                           <children>
+                              <Label text="Note" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <FontAwesomeIconView fill="#cccccc" glyphName="INFO_CIRCLE" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="408.0">
+                           <children>
+                              <Label text="10:30 pm" textFill="#4971ff" />
+                              <Label text=" simply dummy text of the printing and typesettingis... " textFill="#dad7d7">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="55.0" prefHeight="42.0" prefWidth="408.0">
+                           <children>
+                              <Label text="11:00 pm" textFill="#4971ff" />
+                              <Label text=" simply dummy text of the printing and typesettingis... " textFill="#dad7d7">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="97.0" prefHeight="42.0" prefWidth="408.0">
+                           <children>
+                              <Label text="12:30 pm" textFill="#4971ff" />
+                              <Label text=" simply dummy text of the printing and typesettingis... " textFill="#dad7d7">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="139.0" prefHeight="42.0" prefWidth="408.0">
+                           <children>
+                              <Label text="10:06 am" textFill="#4971ff" />
+                              <Label text="simply dummy text of the printing and typesettingis... " textFill="#dad7d7">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="106.0" prefWidth="418.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="#" textFill="#4971ff">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIconView fill="#4971ff" fontSmoothingType="LCD" glyphName="CALENDAR" selectionFill="#4971ff" size="15">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIconView>
+                                          <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #4971ff#4971ff #4971ff#4971ff; -fx-background-radius: 35;">
+                                             <children>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="PLUS" stroke="#4971ff" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="408.0" promptText="type note ..." style="-fx-background-color: #222222;" styleClass="r5">
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>
